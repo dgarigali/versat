@@ -57,7 +57,7 @@ module xconf_reg # (
 	else begin
 	   
 	   // configure MEMs
-	  for (i=0; i<2*`nMEM; i=i+1) begin 
+	  for (i=0; i<`nMEM; i=i+1) begin 
 	     
 	     if(ctr_addr == (`CONF_MEM0A + i*`MEMP_CONF_OFFSET + `MEMP_CONF_ITER))
 	       conf_reg[`CONF_MEM0A_B-i*`MEMP_CONF_BITS -: `MEM_ADDR_W] <= ctr_data_in[`MEM_ADDR_W-1:0];
